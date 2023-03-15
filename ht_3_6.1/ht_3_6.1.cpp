@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <map>
 #include <vector>
-//#include <algorithm>
+#include <algorithm>
 
 int main()
 {
@@ -13,8 +13,8 @@ int main()
     for (auto i = str.begin(); i != str.end(); i++) {
         m1[*i]++;
     }
-    std::sort(m1.begin(), m1.end(), [](std::pair<char,int>  const& a, std::pair<char,int> const& b)->bool {return a.second > b.second;});
-    /*std::vector<std::pair<char, int>> v1;
+    //std::sort(m1.begin(), m1.end(), [](std::pair<char,int>  const& a, std::pair<char,int> const& b)->bool {return a.second > b.second;}); 
+    std::vector<std::pair<char, int>> v1;
     for (auto i = m1.begin(); i != m1.end(); i++) {
         v1.push_back(*i);
     }
@@ -23,6 +23,6 @@ int main()
     std::cout << "[OUT]\n";
     for (auto i = v1.begin(); i != v1.end(); i++) {
         std::cout << ((std::pair<char, int>) * i).first << " " << ((std::pair<char, int>) * i).second << "\n";
-    }*/
+    }
 
 }
